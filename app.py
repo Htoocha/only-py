@@ -13,7 +13,7 @@ def download():
         return jsonify({'error': 'No URL provided'}), 400
 
     try:
-        yt = YouTube(url, use_po_token=True)
+        yt = YouTube(url)
         title = yt.title.replace(" ", "_")
 
         # Priority: 1080p > 720p > 360p
